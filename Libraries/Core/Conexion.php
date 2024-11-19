@@ -1,22 +1,22 @@
 <?php
 class Conexion{
-	private $conect;
+    private $conect;
 
-	public function __construct(){
-		$connectionString = "mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=".DB_CHARSET.";port=3306;"
-		try{
-			$this->conect = new PDO($connectionString, DB_USER, DB_PASSWORD);
-			$this->conect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		    echo "conexión exitosa";
-		}catch(PDOException $e){
-			$this->conect = 'Error de conexión';
-		    echo "ERROR: " . $e->getMessage();
-		}
-	}
+    public function __construct(){
+        $connectionString = "mysql:host=".DB_HOST.";port=3306;dbname=".DB_NAME.";charset=".DB_CHARSET; // Agrega el puerto aquí
+        try{
+            $this->conect = new PDO($connectionString, DB_USER, DB_PASSWORD);
+            $this->conect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //echo "conexión exitosa";
+        }catch(PDOException $e){
+            $this->conect = 'Error de conexión';
+            echo "ERROR: " . $e->getMessage();
+        }
+    }
 
-	public function conect(){
-		return $this->conect;
-	}
+    public function conect(){
+        return $this->conect;
+    }
 }
 
 ?>
