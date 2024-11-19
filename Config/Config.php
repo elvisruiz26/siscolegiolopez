@@ -1,6 +1,6 @@
 <?php 
 	//const BASE_URL = "http://localhost/colegio";
-	const BASE_URL = "https://elvisruizdev.com/";
+	const BASE_URL = "https://elvisruizdev";
 
 	//Zona horaria
 	date_default_timezone_set('America/Lima');
