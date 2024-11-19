@@ -1,14 +1,15 @@
 <?php 
-	const BASE_URL = "http://localhost/colegio";
+	//const BASE_URL = "http://localhost/colegio";
+	const BASE_URL = "https://elvisruizdev/";
 
 	//Zona horaria
 	date_default_timezone_set('America/Lima');
 
 	//Datos de conexión a Base de Datos
-	const DB_HOST = "localhost";
-	const DB_NAME = "bd_colegio";
-	const DB_USER = "root";
-	const DB_PASSWORD = "";
+	const DB_HOST = "servidorlopez.mysql.database.azure.com";
+	const DB_NAME = "colegiodb";
+	const DB_USER = "rzudoozuoo";
+	const DB_PASSWORD = "LoH$gon8cjWHboKz";
 	const DB_CHARSET = "utf8";
 
 	//Para envío de correo
